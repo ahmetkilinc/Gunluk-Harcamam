@@ -31,7 +31,7 @@
 
     <TextView
         android:id="@+id/textViewGunlukSabitGiderler"
-        android:layout_width="176dp"
+        android:layout_width="120dp"
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
@@ -55,13 +55,13 @@
         android:layout_height="42dp"
         android:layout_marginBottom="80dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/buttonHesapla"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSabitGiderler"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewGunlukSabitGiderler"
+        app:layout_constraintVertical_bias="0.545" />
 
     <Button
         android:id="@+id/buttonHesapla"
@@ -71,23 +71,40 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="80dp"
-        android:text="Button"
+        android:text="@string/buttonHesapla"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewKalanGunSayisi"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.217" />
 
     <Button
         android:id="@+id/buttonSabitGiderEkle"
-        android:layout_width="166dp"
-        android:layout_height="42dp"
+        android:layout_width="104dp"
+        android:layout_height="52dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="38dp"
-        android:text="Sabit Gider Ekle"
+        android:layout_marginTop="28dp"
+        android:text="@string/buttonSabitGider"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.652"
+        app:layout_constraintHorizontal_bias="0.183"
         app:layout_constraintStart_toEndOf="@+id/textViewGunlukSabitGiderler"
         app:layout_constraintTop_toBottomOf="@+id/editTextEldekiPara" />
+
+    <TextView
+        android:id="@+id/textViewToplamGider"
+        android:layout_width="86dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextKalanGunSayisi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/buttonSabitGiderEkle"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEldekiPara"
+        app:layout_constraintVertical_bias="0.035" />
+
 </android.support.constraint.ConstraintLayout>

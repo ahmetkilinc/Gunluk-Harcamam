@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Gunluk Harcamam</string>
+    <string name="buttonEkle">Ekle</string>
+    <string name="buttonVazgec">Vazgeç</string>
+    <string name="buttonHesapla">Hesapla</string>
+    <string name="buttonSabitGider">Sabit Gider Ekle</string>
 </resources>
