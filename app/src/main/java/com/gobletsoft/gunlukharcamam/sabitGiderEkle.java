@@ -53,7 +53,7 @@ public class sabitGiderEkle extends AppCompatActivity {
 
                 if(et1.isShown() == false) {
 
-                    Toast.makeText(getApplicationContext(), "Gider ekleyebilmek için öncelikle gider kutusu ekleyerek değer eklemelisiniz.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getApplicationContext().getResources().getString(R.string.toastMessageNoExpense), Toast.LENGTH_LONG).show();
                 }
                 else{
 
@@ -63,7 +63,7 @@ public class sabitGiderEkle extends AppCompatActivity {
                     }
                     else{
 
-                        Toast.makeText(getApplicationContext(), "Gider kutusuna lütfen bir değer giriniz.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), getApplicationContext().getResources().getString(R.string.toastMessageNoExpense), Toast.LENGTH_LONG).show();
                     }
 
                     if (et2.isShown() == false){
@@ -78,7 +78,7 @@ public class sabitGiderEkle extends AppCompatActivity {
                         }
                         else{
 
-                            Toast.makeText(getApplicationContext(), "Gider kutusuna lütfen bir değer giriniz.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), getApplicationContext().getResources().getString(R.string.toastMessageNoExpense), Toast.LENGTH_LONG).show();
                         }
 
                         if(et3.isShown() == false){
@@ -95,7 +95,7 @@ public class sabitGiderEkle extends AppCompatActivity {
 
                             else{
 
-                                Toast.makeText(getApplicationContext(), "Gider kutusuna lütfen bir değer giriniz.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(), getApplicationContext().getResources().getString(R.string.toastMessageNoExpense), Toast.LENGTH_LONG).show();
                             }
 
                             if(et4.isShown() == false){
@@ -112,7 +112,7 @@ public class sabitGiderEkle extends AppCompatActivity {
 
                                 else{
 
-                                    Toast.makeText(getApplicationContext(), "Gider kutusuna lütfen bir değer giriniz.", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(), getApplicationContext().getResources().getString(R.string.toastMessageNoExpense), Toast.LENGTH_LONG).show();
                                 }
 
                                 if (et5.isShown() == false){
@@ -129,7 +129,7 @@ public class sabitGiderEkle extends AppCompatActivity {
 
                                     else{
 
-                                        Toast.makeText(getApplicationContext(), "Gider kutusuna lütfen bir değer giriniz.", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getApplicationContext(), getApplicationContext().getResources().getString(R.string.toastMessageNoExpense), Toast.LENGTH_LONG).show();
                                     }
                                 }
                             }

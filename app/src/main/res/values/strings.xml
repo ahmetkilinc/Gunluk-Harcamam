@@ -1,7 +1,16 @@
 <resources>
-    <string name="app_name">Gunluk Harcamam</string>
-    <string name="buttonEkle">Ekle</string>
-    <string name="buttonVazgec">Vazgeç</string>
-    <string name="buttonHesapla">Hesapla</string>
-    <string name="buttonSabitGider">Sabit Gider Ekle</string>
+    <string name="app_name">My Daily Expense</string>
+    <string name="buttonEkle">Add</string>
+    <string name="buttonVazgec">Cancel</string>
+    <string name="buttonHesapla">How much money can I spend daily?</string>
+    <string name="buttonSabitGider">Add Expenses</string>
+    <string name="textViewEldekiPara">The money I have now:</string>
+    <string name="textViewSabitGiderler">My expenses until the next income:</string>
+    <string name="textViewKalanGunSayisi">Days left to next salary:</string>
+    <string name="toastMessageNoExpense">Please add an expense!</string>
+    <string name="textViewSonuc">The money you can spend daily:</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

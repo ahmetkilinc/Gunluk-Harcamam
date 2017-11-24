@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".gunlukHarcamaLimitim" />
-        <activity android:name=".sabitGiderEkle"></activity>
+        <activity android:name=".sabitGiderEkle" />
+        <activity android:name=".sonucHesap" />
+        <activity android:name=".ScreenSlidePagerActivity"/>
     </application>
 
 </manifest>
