@@ -7,12 +7,16 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class gunlukHarcamaLimitim extends AppCompatActivity {
 
-    public Double toplamGider = 0.0;
+    public Double toplamGider;
+    public Double eldekiPara;
+    public Double sonuc = 0.0;
+    public Double kalanGunSayisi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,16 +28,40 @@ public class gunlukHarcamaLimitim extends AppCompatActivity {
 
         setContentView(R.layout.activity_gunluk_harcama_limitim);
 
-        TextView tv = (TextView) findViewById(R.id.textViewToplamGider);
+        Button btnSabitGiderEkle = findViewById(R.id.buttonSabitGiderEkle);
+        TextView tvToplamGider = (TextView) findViewById(R.id.textViewToplamGider);
+        Button btnHesapla = (Button) findViewById(R.id.buttonHesapla);
+        final EditText etEldekiPara = (EditText) findViewById(R.id.editTextEldekiPara);
+        final EditText etKalanGunSayisi = (EditText) findViewById(R.id.editTextKalanGunSayisi);
 
         //sabit gider sayfasından hesaplanan değeri geri almak.
+        Intent intentToplamGider = this.getIntent();
+        toplamGider = intentToplamGider.getDoubleExtra("toplamGider", 0.0);
+        tvToplamGider.setText(toplamGider.toString());
 
-        Intent intent1 = this.getIntent();
-        toplamGider = intent1.getDoubleExtra("toplamGider", 0.0);
-        Toast.makeText(getApplicationContext(), "toplam: " + toplamGider, Toast.LENGTH_LONG).show();
-        tv.setText(toplamGider.toString());
+        btnHesapla.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-        Button btnSabitGiderEkle = (Button) findViewById(R.id.buttonSabitGiderEkle);
+               if (etEldekiPara.getText().toString().isEmpty() || etKalanGunSayisi.getText().toString().isEmpty() || toplamGider.toString().isEmpty()){
+
+                   Toast.makeText(getApplicationContext(), "Please be sure to fill all the variables", Toast.LENGTH_LONG).show();
+               }
+
+               else {
+
+                   eldekiPara = Double.parseDouble(etEldekiPara.getText().toString());
+                   kalanGunSayisi = Double.parseDouble(etKalanGunSayisi.getText().toString());
+                   sonuc = (eldekiPara - toplamGider) / kalanGunSayisi;
+
+                   Toast.makeText(getApplicationContext(), sonuc.toString(), Toast.LENGTH_LONG).show();
+
+                   Intent intentSonuc = new Intent(gunlukHarcamaLimitim.this, sonucHesap.class);
+                   intentSonuc.putExtra("sonuc", sonuc);
+                   startActivity(intentSonuc);
+               }
+            }
+        });
 
         btnSabitGiderEkle.setOnClickListener(new View.OnClickListener() {
             @Override

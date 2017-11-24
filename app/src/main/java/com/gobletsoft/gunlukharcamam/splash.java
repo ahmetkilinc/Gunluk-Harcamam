@@ -26,7 +26,7 @@ public class splash extends AppCompatActivity {
                 }catch(InterruptedException e){
                     e.printStackTrace();
                 }finally{
-                    Intent intent = new Intent(splash.this, gunlukHarcamaLimitim.class);
+                    Intent intent = new Intent(splash.this, ScreenSlidePagerActivity.class);
                     startActivity(intent);
                 }
             }

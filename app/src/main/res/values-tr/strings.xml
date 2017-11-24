@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Günlük Harcamam</string>
+    <string name="buttonEkle">Ekle</string>
+    <string name="buttonVazgec">Vazgeç</string>
+    <string name="buttonHesapla">Günlük ne kadar para harcayabilirim?</string>
+    <string name="buttonSabitGider">Gider Ekle</string>
+    <string name="textViewEldekiPara">Mevcut param:</string>
+    <string name="textViewKalanGunSayisi">Gelecek maaşıma kalan gün sayısı:</string>
+    <string name="textViewSabitGiderler">Bir sonraki gelirime kadar ki harcamalarım:</string>
+    <string name="toastMessageNoExpense">Lütfen bir gider ekleyin!</string>
+</resources>
