@@ -1,42 +1,77 @@
 package com.gobletsoft.gunlukharcamam;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
 
 public class ScreenSlidePagerActivity extends FragmentActivity {
 
-    /**
-     * The number of pages (wizard steps) to show in this demo.
-     */
-    private static final int NUM_PAGES = 5;
-
-    /**
-     * The pager widget, which handles animation and allows swiping horizontally to access previous
-     * and next wizard steps.
-     */
+    private static final int NUM_PAGES = 3;
     private ViewPager mPager;
-
-    /**
-     * The pager adapter, which provides the pages to the view pager widget.
-     */
     private PagerAdapter mPagerAdapter;
+    public BottomNavigationView bottomNavigation;
+    public Double sonuc = 0.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_screen_slide);
+
+
+        Intent intentSonuc = this.getIntent();
+        sonuc = intentSonuc.getDoubleExtra("sonuc", 0.0);
 
         // Instantiate a ViewPager and a PagerAdapter.
         mPager = (ViewPager) findViewById(R.id.pager);
         mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPagerAdapter);
         mPager.setPageTransformer(true, new ZoomOutPageTransformer());
+
+        bottomNavigation = findViewById(R.id.navigation);
+
+        bottomNavigation.setOnNavigationItemSelectedListener(
+
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                        switch (item.getItemId()) {
+
+                            case R.id.action_1:
+
+                                mPager.setCurrentItem(0);
+                                break;
+
+                            case R.id.action_2:
+
+                                mPager.setCurrentItem(1);
+                                break;
+
+                            case R.id.action_3:
+
+                                mPager.setCurrentItem(2);
+                                break;
+                        }
+                        return true;
+                    }
+                });
     }
 
     @Override
@@ -51,10 +86,7 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
         }
     }
 
-    /**
-     * A simple pager adapter that represents 5 ScreenSlidePageFragment objects, in
-     * sequence.
-     */
+
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
         public ScreenSlidePagerAdapter(FragmentManager fm) {
             super(fm);
@@ -62,7 +94,19 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int position) {
-            return new firstFragment();
+
+            if(position == 0){
+                
+                return new firstFragment();
+            }
+            else if(position == 1){
+
+                return new secondFragment();
+            }
+            else{
+
+                return new thirdFragment();
+            }
         }
 
         @Override
