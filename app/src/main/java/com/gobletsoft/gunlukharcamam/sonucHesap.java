@@ -39,6 +39,10 @@ public class sonucHesap extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                Intent intent = new Intent(sonucHesap.this, ScreenSlidePagerActivity.class);
+                startActivity(intent);
+
+                /*
                 LayoutInflater layoutInflater
                         = (LayoutInflater)getBaseContext()
                         .getSystemService(LAYOUT_INFLATER_SERVICE);
@@ -84,7 +88,7 @@ public class sonucHesap extends AppCompatActivity {
                 });
 
 
-                popupWindow.showAsDropDown(btnCanBuy, 50, 50);
+                popupWindow.showAsDropDown(btnCanBuy, 50, 50);*/
             }
         });
 

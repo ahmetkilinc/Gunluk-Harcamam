@@ -1,6 +1,7 @@
 package com.gobletsoft.gunlukharcamam;
 
 import android.content.Intent;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -56,7 +57,14 @@ public class gunlukHarcamaLimitim extends AppCompatActivity {
 
                    Toast.makeText(getApplicationContext(), sonuc.toString(), Toast.LENGTH_LONG).show();
 
-                   Intent intentSonuc = new Intent(gunlukHarcamaLimitim.this, sonucHesap.class);
+                   /*
+                   Bundle bundle = new Bundle();
+                   bundle.putDouble("sonuc", sonuc);
+                    // set Fragmentclass Arguments
+                   Fragment firstFragment = new Fragment();
+                   firstFragment.setArguments(bundle);*/
+
+                   Intent intentSonuc = new Intent(gunlukHarcamaLimitim.this, ScreenSlidePagerActivity.class);
                    intentSonuc.putExtra("sonuc", sonuc);
                    startActivity(intentSonuc);
                }
