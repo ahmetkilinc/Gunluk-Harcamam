@@ -9,4 +9,8 @@
     <string name="textViewKalanGunSayisi">Gelecek maaşıma kalan gün sayısı:</string>
     <string name="textViewSabitGiderler">Bir sonraki gelirime kadar ki harcamalarım:</string>
     <string name="toastMessageNoExpense">Lütfen bir gider ekleyin!</string>
+    <string name="textViewSonuc">Günlük harcayabileceğin para:</string>
+    <string name="navigationmenu1">Günlük Limit</string>
+    <string name="navigationmenu2">Neler Alabilirim?</string>
+    <string name="navigationmenu3">Daha çok Para?</string>
 </resources>

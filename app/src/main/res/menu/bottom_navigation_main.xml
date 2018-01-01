@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/action_1"
-        android:title="hoi1"
+        android:title="@string/navigationmenu1"
         android:icon="@drawable/food1" />
     <item android:id="@+id/action_2"
-        android:title="hoi2"
+        android:title="@string/navigationmenu2"
         android:icon="@drawable/food2" />
     <item android:id="@+id/action_3"
-        android:title="hoi3"
+        android:title="@string/navigationmenu3"
         android:icon="@drawable/food4" />
 </menu>

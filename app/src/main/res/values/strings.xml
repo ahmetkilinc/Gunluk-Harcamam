@@ -9,8 +9,8 @@
     <string name="textViewKalanGunSayisi">Days left to next salary:</string>
     <string name="toastMessageNoExpense">Please add an expense!</string>
     <string name="textViewSonuc">The money you can spend daily:</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigationmenu1">Daily Limit</string>
+    <string name="navigationmenu2">What to Buy?</string>
+    <string name="navigationmenu3">Need more Money?</string>
 
 </resources>
